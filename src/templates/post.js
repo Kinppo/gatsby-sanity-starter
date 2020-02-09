@@ -7,7 +7,7 @@ import BlockContent from "../components/block-content";
 import Seo from "../components/seo";
 const Container = styled.div`
   max-width: 1000px;
-  margin: 20em auto;
+  margin: 7em auto;
   font-family: Poppins, sans-serif;
   img {
     width: 100%;
@@ -44,9 +44,7 @@ export default function blog({ data }) {
         />
         <div className="content">
           <h1>{data.sanityPost.title}</h1>
-          {data.sanityPost._rawBody && (
-            <BlockContent blocks={data.sanityPost._rawBody} />
-          )}
+          <BlockContent blocks={data.sanityPost._rawBody} />
           <p className="date">{data.sanityPost.publishedAt}</p>
         </div>
       </Container>
@@ -60,9 +58,6 @@ export const query = graphql`
       title
       description
       categories {
-        title
-      }
-      tags {
         title
       }
       _rawBody

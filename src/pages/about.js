@@ -28,7 +28,7 @@ const Container = styled.div`
   h2 {
     text-align: center;
     margin-bottom: 2em;
-    margin-top: 4em;
+    margin-top: 2em;
   }
   ul {
     margin: 0;
@@ -133,7 +133,7 @@ export default About;
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "ab-img.png" }) {
+    file(relativePath: { eq: "svg.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

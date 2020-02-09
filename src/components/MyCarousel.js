@@ -3,11 +3,9 @@ import styled from "styled-components";
 import { Link, graphql, StaticQuery } from "gatsby";
 import { Carousel } from "react-bootstrap";
 const Container = styled.div`
-  z-index: -1;
   height: 100%;
-  max-width: 1920px;
-  margin: auto;
-  margin-top: 200px;
+  width: 100%;
+  margin-bottom: 6em;
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     background-image: linear-gradient(
@@ -103,12 +101,10 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allSanityPost(limit: 8) {
+        allSanityPost(limit: 3) {
           edges {
             node {
               title
-              publishedAt
-              description
               slug {
                 current
               }
@@ -118,9 +114,6 @@ export default () => (
                     ...GatsbySanityImageFluid
                   }
                 }
-              }
-              categories {
-                title
               }
             }
           }

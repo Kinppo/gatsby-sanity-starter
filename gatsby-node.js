@@ -26,16 +26,6 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
-      allSanityTag {
-        edges {
-          node {
-            title
-            slug {
-              current
-            }
-          }
-        }
-      }
     }
   `);
 
@@ -58,17 +48,6 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve("src/templates/postCategory.js"),
       context: {
         title: category.title
-      }
-    });
-  });
-
-  const tag = result.data.allSanityTag.edges.map(({ node }) => node);
-  tag.forEach(tag => {
-    actions.createPage({
-      path: tag.slug.current,
-      component: path.resolve("src/templates/postTag.js"),
-      context: {
-        title: tag.title
       }
     });
   });

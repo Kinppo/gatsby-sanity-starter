@@ -3,41 +3,16 @@ import Carousel from "../components/MyCarousel";
 import Layout from "../templates/DefaultLayout";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
-import LatestPosts from "../components/LatestPosts";
-import Aside from "../components/Aside";
-import ImageSection from "../components/ImageSection";
+import InstaPosts from "../components/InstaPosts";
 import Seo from "../components/seo";
 import Img from "gatsby-image";
 
 const Container = styled.div`
-  width: 100%;
-  a {
-    color: inherit;
-    margin-bottom: 2em;
-    &:hover {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-  .row {
-    max-width: 1400px;
-    margin: auto;
-    margin-top: 10em;
-    display: grid;
-    grid-gap: 2%;
-    grid-template-columns: 69% 29%;
-  }
-  @media only screen and (max-width: 720px) {
-    .row {
-      display: block;
-    }
-  }
-
   .cards {
-    margin-bottom: 8em;
-    margin-left: 1em;
-    width: calc(100% - 1em);
+    max-width: 1100px;
+    margin: auto;
     box-sizing: border-box;
+    margin-bottom: 8em;
     @media only screen and (max-width: 720px) {
       margin-left: 0em;
       width: calc(100%);
@@ -130,30 +105,26 @@ const IndexPage = ({ data }) => {
       <Seo title="home" />
       <Layout location="/">
         <Carousel />
-        <LatestPosts />
-        <div className="row">
-          <div className="cards">
-            {data.allSanityPost.edges.map(({ node }) => (
-              <div className="card" key={node.slug.current}>
-                <Img
-                  fixed={node.mainImage.asset.fixed}
-                  alt="work screenshot"
-                  className="card-img"
-                />
-                <div className="card-info">
-                  <h6>{node.categories[0].title}</h6>
-                  <h5>{node.title}</h5>
-                  <p>{node.description}</p>
-                  <Link to={node.slug.current}>
-                    <button className="see-more">SEE MORE</button>
-                  </Link>
-                </div>
+        <div className="cards">
+          {data.allSanityPost.edges.map(({ node }) => (
+            <div className="card" key={node.slug.current}>
+              <Img
+                fixed={node.mainImage.asset.fixed}
+                alt="work screenshot"
+                className="card-img"
+              />
+              <div className="card-info">
+                <h6>{node.categories[0].title}</h6>
+                <h5>{node.title}</h5>
+                <p>{node.description}</p>
+                <Link to={node.slug.current}>
+                  <button className="see-more">SEE MORE</button>
+                </Link>
               </div>
-            ))}
-          </div>
-          <Aside />
+            </div>
+          ))}
         </div>
-        <ImageSection />
+        <InstaPosts />
       </Layout>
     </Container>
   );

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Web consulting`,
-    description: `This is a blog protfolio for a web consultant`,
+    title: `Mbk starter`,
+    description: `This is a gatsby starter with sanity.io as a backend`,
     author: `Mouaad Boukiaou`
   },
   plugins: [
@@ -25,12 +25,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-scroll-reveal`,
-      options: {
-        once: false
-      }
-    },
-    {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true,
@@ -40,8 +34,10 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "9xxo12zp",
-        dataset: "production"
+        projectId: "js0m3ln8",
+        dataset: "production",
+        overlayDrafts: true,
+        watchMode: true
       }
     },
     {
@@ -53,13 +49,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `The Web consulting`,
-        short_name: `WebConsulting`,
+        name: `Mbk`,
+        short_name: `Mbk`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#663399`,
         display: `standalone`,
-        icon: `src/images/icon.png`
+        icon: `src/images/logo.png`
       }
     }
   ]

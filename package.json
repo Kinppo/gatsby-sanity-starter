@@ -1,38 +1,9 @@
 {
-  "name": "gatsby-starter-ghost",
-  "description": "A starter template to build lightning fast websites with Ghost and Gatsby",
-  "version": "1.0.0",
-  "license": "MIT",
-  "author": "Ghost Foundation",
-  "homepage": "https://docs.ghost.org/api/gatsby/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tryghost/gatsby-starter-ghost.git"
-  },
-  "resolutions": {
-    "sharp": "0.23.4"
-  },
-  "engines": {
-    "node": ">= 8.9.0"
-  },
-  "bugs": {
-    "url": "https://github.com/tryghost/gatsby-starter-ghost/issues"
-  },
-  "keywords": [
-    "gatsby",
-    "ghost"
-  ],
-  "main": "n/a",
-  "scripts": {
-    "serve": "gatsby build && NODE_ENV=production gatsby serve",
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "lint": "eslint . --ext .js --cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "babel-eslint": "10.0.3"
-  },
+  "name": "mbk-starter",
+  "private": true,
+  "description": "Gatsby Sanity starter",
+  "version": "0.1.0",
+  "author": "Mouaad Boukiaou <boukiaou.mouaad@gmail.com>",
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
     "babel-plugin-styled-components": "^1.10.6",
@@ -46,7 +17,6 @@
     "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-react-helmet": "3.1.15",
     "gatsby-plugin-sass": "^2.1.27",
-    "gatsby-plugin-scroll-reveal": "^0.0.4",
     "gatsby-plugin-sharp": "^2.4.4",
     "gatsby-plugin-styled-components": "^3.1.17",
     "gatsby-source-filesystem": "^2.1.46",
@@ -59,5 +29,28 @@
     "react-dom": "16.12.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbk8/gatsby-sanity-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

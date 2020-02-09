@@ -30,6 +30,7 @@ function BlogCard({ img, title, desc, date, width }) {
       color: #3c484e;
       line-height: 1.4em;
       padding: 0px 10px;
+      font-size: 14px;
     }
     .time {
       color: #666;

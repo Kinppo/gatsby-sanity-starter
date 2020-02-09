@@ -1,1 +1,1 @@
-# Gatsby website
+# Gatsby Sanity Starter

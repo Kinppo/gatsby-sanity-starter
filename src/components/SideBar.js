@@ -94,7 +94,7 @@ const SideBar = ({ toggleSideBar, SideBarIsActive }) => {
           <Link to="/">
             <p>HOME</p>
           </Link>
-          <Link to="./blogs">
+          <Link to="./posts">
             <p>BLOGS</p>
           </Link>
           <Link to="./about">

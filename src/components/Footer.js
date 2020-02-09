@@ -34,7 +34,7 @@ function Footer() {
     <Container>
       <div className="site-foot-nav container">
         <div className="site-foot-nav-left">All rights reserved © 2020</div>
-        <div className="site-foot-nav-right">Developed By Mouaad Boukioau</div>
+        <div className="site-foot-nav-right">Developed By Mbk</div>
       </div>
     </Container>
   );
