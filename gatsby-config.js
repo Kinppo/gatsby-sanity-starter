@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Mbk starter`,
     description: `This is a gatsby starter with sanity.io as a backend`,
-    author: `Mouaad Boukiaou`
+    author: `MBK`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
